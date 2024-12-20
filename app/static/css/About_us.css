@@ -1,0 +1,33 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+.container {
+    text-align: center;
+    padding: 50px 20px;
+}
+.header {
+    color: blue;
+    font-size: 36px;
+    font-weight: bold;
+}
+.subheader {
+    color: blue;
+    font-size: 18px;
+    margin-top: 10px;
+}
+.background-section {
+    background-color: #011627;
+    color: white;
+    padding: 50px 20px;
+}
+.background-title {
+    color: magenta;
+    font-size: 24px;
+    font-weight: bold;
+}
+.background-text {
+    color: white;
+    font-size: 16px;
+    margin-top: 20px;
+}

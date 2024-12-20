@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .img {
+    width: 50%;
+    height: 5%;
+    object-fit: cover;
+  }
+  
+  .btn-outline-success {
+    color: rgb(21, 20, 20);
+    border-color: rgb(16, 15, 15);
+  }
+  
+  .btn-outline-success:hover {
+    background-color: #007bff;
+    color: #fff;
+    border-color: #007bff;
+  }
+
+  
+
+
+
+  .tabs {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .tab {
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .tab:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .content-section {
+    padding: 20px;
+  }
+  
+  .content {
+    display: none;
+  }
+  
+  .content.active {
+    display: block;
+  }
+  
+
+
+
+
+  

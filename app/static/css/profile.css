@@ -1,0 +1,164 @@
+/* Global Styles */
+
+#nav-bar {
+  position: static !important;
+  top: 0;
+  z-index: 10;
+}
+
+.main-container {
+  display: flex;
+}
+
+.sidebar_content {
+  margin-left: 30%;
+  padding: 1px 16px;
+}
+
+.active-dashboard {
+  border: 3px solid #000 !important;
+  border-radius: 15%;
+  background-color: #9DC1E3;
+  color: #000 !important;
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 700px) {
+  .sidebar_content {
+    margin-left: 0;
+  }
+}
+
+/* Navigation Bar Styles */
+
+.nav_section {
+  background-color: #0c0c0cc2;
+}
+
+.navbar {
+  background-color: #0c0c0cc2;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.nav-link {
+  color: #fff;
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  color: #ccc;
+}
+
+.dropdown-menu {
+  background-color: #333;
+  border: none;
+  border-radius: 0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-item {
+  color: #fff;
+  padding: 10px 20px;
+  border-bottom: 1px solid #444;
+}
+
+.dropdown-item:hover {
+  background-color: #444;
+  color: #fff;
+}
+
+.profile_img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+/* Footer Styles */
+
+.footer_section {
+  background-color: #e2770dc2;
+  padding: 20px 0;
+}
+
+.footer {
+  color: #fff;
+  font-size: 14px;
+}
+
+.quick-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.quick-links li {
+  margin-bottom: 10px;
+}
+
+.quick-links a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.quick-links a:hover {
+  color: #ccc;
+}
+
+.useful_text {
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.footer_menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer_menu li {
+  margin-bottom: 10px;
+}
+
+.footer_menu a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer_menu a:hover {
+  color: #ccc;
+}
+
+.location_text {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.location_text li {
+  margin-bottom: 10px;
+}
+
+.location_text a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.location_text a:hover {
+  color: #ccc;
+}
+
+.profile_img{
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  border: 2px solid black;
+}

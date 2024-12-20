@@ -1,0 +1,146 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}
+  Product_Details
+{% endblock title %}
+{% block contain %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'css/course_details.css' %}">
+  <div class="container-fluid">
+   <div class="left-section">
+    <div class="course-title">
+      <h2>{{course.name}}</h2>
+    </div>
+    <div class="course-meta">
+     <span>
+      By Sipalaya InfoTech
+     </span>
+     <span>
+      Categories: Development
+     </span>
+    </div>
+    <img class="course-image" height="400" src="{{course.image.url}}"  width="600"/>
+   </div>
+   <div class="right-section">
+    <div class="price-section">
+      <span class="float-start badge rounded-pill bg-danger text-decoration-line-through">रु {{course.mark_price}}</span>
+			<span class="float-start badge rounded-pill bg-success">रु {{course.price}}</span>
+     
+    </div>
+    
+    <div class="d-grid gap-2 my-5">
+        <a href="{% url 'cart_add' course.id %}" class="btn btn-warning bold-btn">Add to cart</a>
+    </div>
+    
+    <div class="course-details">
+     <div>
+      <i class="fas fa-signal">
+      </i>
+      All Levels
+     </div>
+     <div>
+      <i class="fas fa-clock">
+      </i>
+      100 hours Duration
+     </div>
+     <div>
+      <i class="fas fa-sync-alt">
+      </i>
+      <b>Currently updated Date :: </b>{{course.date}}
+     </div>
+    </div>
+    <div class="course-author">
+     <img alt="Author's profile picture" height="40" src="{{course.image.url}}" width="40"/>
+     <div>
+      <span>
+       A course by
+      </span>
+      <span>
+       Sipalaya InfoTech
+      </span>
+     </div>
+    </div>
+   </div>
+ 
+   </div>
+ 
+  
+
+  
+<!-- commnets and  -->
+<div class="container-fluid">
+  <div class="row">
+    <div class="col">
+        
+        <div class="tabs">
+          <div class="tab" onclick="showContent('course-info')">
+            Course Info
+          </div>
+          <div class="tab" onclick="showContent('reviews')">
+            Reviews
+          </div>
+        </div>
+        <div class="content-section">
+          <div class="row">
+            <div class="col-6">
+              <div class="content" id="course-info">
+                <strong>About Course</strong>
+                <p class="card-text">{{course.About_course}}</p>
+              </div>
+              <div class="content" id="reviews">
+                <div class="container">
+                  {% if reviews %}
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th>Username</th>
+                        <th>Date</th>
+                        <th>Comment</th>
+                        <th>Rating</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {% for i in reviews %}
+                      <tr>
+                        <td><i class="fa-solid fa-user-secret">{{i.user.username}}</i></td>
+                        <td><i class="fa-solid fa-calendar-xmark"></i>{{i.date}}</td>
+                        <td class="text-wrap"><i class="fa-solid fa-comments"></i>{{i.comment}}</td>
+                        <td><i class="fa-solid fa-star-half-stroke">{{ i.rating }}</i></td>
+                      
+                      </tr>
+                      {% endfor %}
+                    </tbody>
+                  </table>
+                  {% endif %}
+                  {% if not cmt_all %}
+                  <h2><a href="?cmt_all=true #reviews">View all the comments</a></h2>
+                  {% endif %}
+              
+                  
+                </div>
+              </div>
+            
+            </div>
+              <!-- review and rating form  -->
+              <div class="container-fluid my-container">
+                <p><b>Write Your Review</b></p>
+                {% if request.user.is_authenticated %}
+                  <form method="post" action="#">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                  </form>
+                {% else %}
+                  <h3 class="'text-center alert alert-danger">You should login first
+                  Click Here<a href =" {% url 'log_in' %}">Login</a>
+                  </h3>
+                {% endif %}
+              </div>
+          </div>
+        </div>
+      
+
+<script src="{% static 'js/product_detail.js' %}"></script>
+
+
+{% endblock contain %}

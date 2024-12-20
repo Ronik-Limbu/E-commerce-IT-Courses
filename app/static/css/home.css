@@ -1,0 +1,239 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+.navbar-nav .nav-item .nav-link {
+  position: relative;
+  cursor: pointer;
+  color: white;
+  font-size: 15px;
+  padding: 0.5rem 1rem;
+  transition: color 0.25s;
+}
+
+.navbar-nav .nav-item::after {
+  position: absolute;
+  content: "";
+  inset: 0;
+  background: rgb(35, 12, 164);
+  scale: 1 0;
+  z-index: -1;
+  transition: 0.45s;
+  border-radius: 10px;
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+  color: hsl(117, 84%, 45%);
+}
+
+.navbar-nav .nav-item .nav-link:hover::after {
+  scale: 1 1;
+}
+
+.top_section {
+  background-color: #1500ff;
+}
+
+.card {
+  background-color: #95ff00;
+}
+
+.courser_section {
+  width: 80%;
+  height: 50%;
+  object-fit: cover;
+}
+
+.carousel-item active {
+  font-weight: 100px;
+  object-fit: cover;
+}
+
+.second_section .btn-outline-primary:hover {
+  background-color: #007bff;
+  color: #ffffff;
+  border-color: #007bff;
+}
+
+.second_section .btn-outline-primary:hover .card {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transform: scale(1.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.home-page .dropdown-menu {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.home-page .dropdown-item {
+  color: #333;
+  padding: 10px;
+  text-decoration: none;
+}
+
+.home-page .dropdown-item:hover {
+  background-color: #f0f0f0;
+  color: #666;
+}
+
+
+
+
+
+/* photo section */
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #ffffff;
+  margin: 0;
+  padding: 0;
+}
+h1 {
+  color: #3b4cca;
+  margin-top: 20px;
+}
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+}
+.gallery img {
+  border: 3px solid #3b4cca;
+  border-radius: 10px;
+  margin: 10px;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
+
+
+.register_section {
+  padding: 10px 20px;
+  background-color: #1500ff;
+  box-shadow: #1500ff;
+}
+
+.register_section {
+  background-image: linear-gradient(to bottom, #141894, #fff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.btn-warning {
+  background-color: #ffc107;
+  border-color: #ffc107;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-warning:hover {
+  background: #1500ff;
+}
+
+.d-grid .btn-warning:hover {
+  background-color: #ffc107;
+  border-color: #ffc107;
+  box-shadow: 0 0 10px rgba(255, 193, 7, 0.5);
+  transform: scale(1.05);
+  transition: all 0.3s ease-in-out;
+}
+
+.d-grid .btn-warning:hover a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.d-grid .btn-warning:hover i {
+  transform: translateX(5px);
+  transition: all 0.3s ease-in-out;
+}
+
+.d-grid .btn-warning a {
+  text-decoration: none;
+}
+
+.course_section .card:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  transform: scale(1.05);
+  transition: all 0.3s ease-in-out;
+}
+
+.course_section .card:hover .card-body {
+  background-color: blue;
+}
+
+.course_section .card:hover .card-body .card-title {
+  color: #333;
+}
+
+.course_section .card:hover .card-body .card-text {
+  color: #666;
+}
+
+.course_section .card:hover .card-body .text-info {
+  color: #337ab7;
+}
+
+.course_section .card:hover .btn-primary {
+  background-color: #337ab7;
+  border-color: #337ab7;
+  box-shadow: 0 0 10px rgba(51, 122, 183, 0.5);
+  transform: scale(1.05);
+  transition: all 0.3s ease-in-out;
+}
+
+.course_section .card:hover .btn-primary:hover {
+  background-color: #23527c;
+  border-color: #23527c;
+}
+
+
+
+
+/* footer section */
+.footer {
+  background: linear-gradient(to right, #3b5998, #0077b5);
+  color: white;
+  padding: 20px 0;
+  position: relative;
+}
+.footer .social-icons {
+  margin-bottom: 10px;
+}
+.footer .social-icons a {
+  color: white;
+  margin: 0 10px;
+  font-size: 20px;
+  text-decoration: none;
+}
+.footer .links {
+  margin-bottom: 10px;
+}
+.footer .links a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+}
+.footer .divider {
+  border-top: 1px solid white;
+  margin: 10px 0;
+}
+.footer .copyright {
+  margin-top: 10px;
+}

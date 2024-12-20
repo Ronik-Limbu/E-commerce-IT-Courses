@@ -1,0 +1,62 @@
+
+.search-container {
+    background-color: #f8f9fc;
+    border: 1px solid #e2e6ea;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 100px;
+    margin-bottom: 150px;
+}
+
+.search-box input[type="text"] {
+    width: 300px;
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-right: none;
+    border-radius: 4px 0 0 4px;
+    outline: none;
+}
+.search-box button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #000;
+    color: #fff;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+}
+.search-box button:hover {
+    background-color: #333;
+}
+
+
+
+/* certificate detail */
+.certificate_container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .text-bolder {
+    font-weight: bold;
+  }
+
+  .text-bold {
+    font-weight: bold;
+  }
+
+  .text-success {
+    color: #28a745;
+  }
+
+  .text-primary {
+    color: #337ab7;
+  }
+
+  .text-muted {
+    color: #999;
+  }

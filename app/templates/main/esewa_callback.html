@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block contain %}
+<h2 class="mt-4">Esewa Callback</h2>
+<div class="card">
+    <div class="card-body">
+        <p>Order ID: {{ order_id }}</p>
+        <p>Transaction ID: {{ transaction_id }}</p>
+        <p>Status: {{ status }}</p>
+        {% if status == 'Success' %}
+            <p>Payment Successful!</p>
+        {% else %}
+            <p>Payment Failed!</p>
+        {% endif %}
+    </div>
+</div>
+{% endblock contain %}

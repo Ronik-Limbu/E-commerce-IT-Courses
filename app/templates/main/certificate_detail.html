@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}
+  Certificate_details
+{% endblock title %}
+
+{% block contain %}
+<div class="certificate_container" class="container-fluid">
+  {% if finds %}
+    <h2 class="text-bolder text-success">Certificate Found:</h2>
+    
+      {% for certificate in finds %}
+        <p class="text-bold text-primary">Certificate Number: {{ certificate.certificate_number }}</p>
+        <p class="text-bold text-primary">Issued To: {{ certificate.issued_to }}</p>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p class="text-muted">No certificates found</p>
+  {% endif %}
+</div>
+{% endblock contain %}

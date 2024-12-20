@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% block title %}
+  Order_checkout
+{% endblock title %}
+{% load static %}
+{% block contain %}
+
+
+
+<div class="container-fluid">
+  <div class="card cart">
+    <label class="title">CHECKOUT</label>
+    <div class="steps">
+      <div class="step">
+        <div class="payments">
+          <span>PAYMENT</span>
+          <div class="details">
+            <span>Name:</span>
+            <span>{{order.name}}</span>
+            <span>Price:</span>
+            <span>{{total_price}}</span>
+            <span>Paid:</span>
+            <span>{{order.is_paid}}</span>
+          </div>
+        </div>
+        <hr>
+        <form action="https://uat.esewa.com.np/epay/main" method="POST">
+            <input value="10" name="tAmt" type="hidden">
+            <input value="10" name="amt" type="hidden">
+            <input value="0" name="txAmt" type="hidden">
+            <input value="0" name="psc" type="hidden">
+            <input value="0" name="pdc" type="hidden">
+            <input value="EPAYTEST" name="scd" type="hidden">
+            <input value="{{order.order_id}}" name="pid" type="hidden">
+            <input value="http://127.0.0.1:8000/esewa-callback/" type="hidden" name="su">
+            <input value="http://127.0.0.1:8000/payment-failed/" type="hidden" name="fu">
+            <input value="Pay With Esewa" type="submit" class="btn btn-success">
+        </form>
+      </div>
+    </div>
+ </div>
+</div>
+
+
+
+{% endblock contain %}

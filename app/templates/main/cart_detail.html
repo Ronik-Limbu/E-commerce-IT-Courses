@@ -1,0 +1,49 @@
+
+{% extends "base.html" %}
+{% block title %}
+  Cart_Detials
+{% endblock title %}
+{% load static %}
+{% block contain %}
+
+
+<h2 class="mt-4">Cart Detail</h2>
+<div class="cart-detail-container" class="container-fluid">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Course</th>
+        <th scope="col">Name</th>
+        <th scope="col">Quantity</th>
+        <th scope="col">Price</th>
+        <th scope="col">Total Price</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+        {% for item in cart_items %}
+        <tr>
+            <th scope="row">{{item.id}}</th>
+            <th scope="row"><img src="{{item.course.image.url}}" alt="Course Image" width="50" height="50"></th>
+            <td>{{item.course.name}}</td>
+            <td>{{item.quantity}}</td>
+            <td>{{item.course.price}}</td>
+            <td>{{item.total_price}}</td>
+            <td>
+                <a href="{% url 'item_increment' item.course.id %}"><button class="btn btn-primary">+</button></a>
+                <a href="{% url 'item_decrement' item.course.id %}"><button class="btn btn-primary">-</button></a>
+                <a href="{% url 'item_clear' item.id %}"><button class="btn btn-danger">Remove</button></a>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+                <p>Total Price: {{total_price}}</p>
+                
+                    
+                <button class="btn btn-primary">
+                    <a class="btn btn-default check_out" href="{% url 'create_order' %}">Order</a>
+                </button>
+</div>
+{% endblock contain %}

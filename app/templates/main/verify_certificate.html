@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}
+  Verify_Certificate
+{% endblock title %}
+
+{% block contain %}
+  <div class="search-container">
+    <p>Try 123456 for test search</p>
+    <div class="search-box">
+      <form action="" method="post">
+        {% csrf_token %}
+        <input type="text" name="searched" placeholder="Enter Certificate Code or Issued To">
+        <button type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+{% endblock contain %}

@@ -1,0 +1,83 @@
+{% extends "base.html" %}
+{% load static %}
+{% block static %}
+  <link rel="stylesheet" href="css/contact.css">
+{% endblock static %}
+{% block title %}
+  Contact_us
+{% endblock title %}
+
+{% block contain %}
+
+    <h1>Contact Us</h1>
+   
+
+
+<div class="first_container" class="container-fluid">
+    <div class="contact_card">
+        <i class="fas fa-book-reader"></i>
+        <div>Learn</div>
+    </div>
+    <div class="contact_card">
+        <i class="fas fa-chart-line"></i>
+        <div>Grow</div>
+    </div>
+    <div class="contact_card">
+        <i class="fas fa-sync-alt"></i>
+        <div>Practice</div>
+    </div>
+    <div class="contact_card">
+        <i class="fas fa-clock"></i>
+        <div>SUN - FRI: 10AM-6PM<br>SAT: Closed</div>
+    </div>
+</div>
+
+<div class="map-container" class="container-fluid">
+    <div class="row">
+        
+            <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14135.697030255036!2d85.33342825596097!3d27.6578150193725!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb175804d46333%3A0x407a3f6860e99df2!2sImadol%2C%20Mahalaxmi!5e0!3m2!1sen!2snp!4v1722413459802!5m2!1sen!2snp"
+                  width="600" height="600" style="border:0;" allowfullscreen="" loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+
+    </div>
+</div>
+<hr class="w-100 fw-3 fs-2 text-danger">
+
+<h1 class="text-center text-bolder">We look forward to hearing from you and helping you succeed in your career.</h1>
+<div class="form_container" class="container-fluid">
+    <div class="row">
+        <div class="col-6 mx-auto">
+            <form method="post" action="{% url 'contact' %}">
+                {% if messages %}
+                    {% for message in messages %}
+                        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                            {{ message }}
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                    {% endfor %}
+                {% endif %}
+                {% csrf_token %}
+                <div class="mb-3">
+                    <label for="name" class="form-label">Full Name</label>
+                    <input type="text" name="name" class="form-control" id="name" aria-describedby="nameHelp">
+                </div>
+                <div class="mb-3">
+                    <label for="age" class="form-label">Age</label>
+                    <input type="number" name="age" class="form-control" id="age" aria-describedby="ageHelp">
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email Address</label>
+                    <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp">
+                </div>
+                <div class="form-floating">
+                  <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea" name="message"></textarea>
+                  <label for="floatingTextarea">message</label>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock contain %}
