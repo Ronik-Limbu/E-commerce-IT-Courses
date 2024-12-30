@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-v49zm26zb+n_71p@uu%v$7fe^=o0rs8dv)f@j^t6&sr&f44&_0
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -42,7 +42,7 @@ INSTALLED_APPS = [
 EXTERNAL_APPS=[
     'app',
     'ckeditor', 
-    'cart',
+    # 'cart',
 ]
 INSTALLED_APPS.extend(EXTERNAL_APPS)
 
